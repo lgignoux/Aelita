@@ -1,4 +1,5 @@
 #include <iostream>
+#include "Piece.hpp"
 
 using namespace std;
 
