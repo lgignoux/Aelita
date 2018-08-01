@@ -14,18 +14,20 @@ class Piece {
   public:
     //Contructors and destructors
     Piece(int pieceType, int color, int position);
-    ~Piece();
+    ~Piece() {}
 
-    //Getters and setters
+    //Getters
     int getType() const { return this->pieceType; }
-    void promote(int newType) { this->pieceType = newType; }
-    void demote() { this->pieceType = PAWN; }
     int getColor() const { return this->color; }
     bool isAlive() const { return this->alive; }
+    int getPosition() const { return this->position; }
+
+    //Setters
+    void promote(int newType);
+    void demote() { this->pieceType = PAWN; }
     void kill() { this->alive = false; }
     void resurrect() { this->alive = true; }
-    int getPosition() const { return this->position; }
-    void moveTo(int newPosition) { this->position = newPosition; }
+    void moveTo(int newPosition);
 
   private:
     int pieceType;
