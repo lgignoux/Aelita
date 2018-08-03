@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Piece.hpp"
+#include "Board.hpp"
 
 using namespace std;
 
